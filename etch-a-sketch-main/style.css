@@ -1,0 +1,133 @@
+:root:not([data-theme=dark]), [data-theme=light] {
+    --primary: rgb(229, 55, 52);
+    --primary-hover: rgb(158, 43, 41);
+    --primary-focus: rgba(193, 16, 16, 0.125);
+    --modal-overlay-background-color: rgba(226,220,213,0.7);
+}
+
+:root:not([data-theme=light]), [data-theme=dark] {
+    --primary: rgb(229, 55, 52);
+    --primary-hover: rgb(250, 60, 70);
+    --primary-focus: rgba(193, 16, 16, 0.25);
+    --modal-overlay-background-color: rgba(52,51,50,0.8);
+}
+
+h1 {
+    font-size: larger;
+}
+
+p {
+    font-size: small;
+}
+
+hgroup {
+    margin-bottom: 0;
+}
+
+hgroup>:last-child {
+    font-size: small;
+}
+
+body>nav {
+    box-shadow:0 1px 0 rgba(115, 130, 140, 0.2);
+}
+
+body>main {
+    padding-top: 30px;
+}
+
+#theme-btn, #toggle-grid {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+* {
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    background-color: #fff;
+    margin: 0 auto;
+    width:400px;
+    height: 400px;
+    display: grid;
+    padding: 0;
+    z-index: 5;
+}
+
+.content {
+    display: flex;
+    gap: 20%;
+}
+
+#size-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.square-border {
+    border: 1px dotted rgba(0,0,0,0.1);
+}
+
+.options {
+    margin: 0;
+    padding: calc(1rem * 2) 1rem;
+    z-index: 5;
+}
+
+.options button {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+}
+
+.color-container, #toggle-grid {
+    transition: all 0.5s;
+    width: 100px;
+    height: 46px;
+    /* top:165px;
+    left:215px; */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 5px 5px 5px 60px;
+    z-index: 4;
+}
+
+#toggle-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(1rem * 2);
+    margin-left: -50px;
+}
+
+.color-container {
+    position: absolute;
+    top:165px;
+    left:215px;
+}
+
+#color-input:focus {
+    box-shadow: none;
+}
+
+#color-input {
+    border-radius: 50px;
+    border: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#color-input::-webkit-color-swatch {
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.grid-toggle-container {
+    display:flex;
+    /* align-items: baseline; */
+}

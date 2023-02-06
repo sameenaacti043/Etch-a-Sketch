@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <script src="https://kit.fontawesome.com/eb34185c6d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <nav class="container-fluid nav">
+        <ul>
+            <li>
+                <hgroup>    
+                    <h1>Etch-a-Sketch</h1>
+                    <h2>By <a href="https://github.com/sameenaacti043" target=”_blank” alt="Check out my GitHub!" data-tooltip="Check out my GitHub!" data-placement="bottom">shaik sameena</a></h2>
+                </hgroup>
+            </li>
+        </ul>
+        <ul>
+            <li><a class="contrast" id="theme-btn" data-tooltip="Turn off dark mode" data-placement="left"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+        </ul>
+    </nav>
+    <main class="container-fluid content">
+        <div class="color-container">
+            <input type="color" name="color-input" id="color-input">
+        </div>
+        <article class="options">
+            <button id="btn-color" class="secondary">Color Mode</button>
+            <button id="btn-rainbow" class="secondary outline">Rainbow mode</button>
+            <button id="btn-erase" class="secondary outline">Erase</button>
+            <button id="btn-clear" class="secondary outline">Clear</button>
+            <small id="size-display">16/16</small>
+            <input type="range" value="16" min="1" max="64" name="size-range" id="size-range">
+        </article>
+        <div class="grid-toggle-container">
+            <article class="grid-container">
+        
+            </article>
+            <a class="secondary" id="toggle-grid" data-tooltip="Show grid" data-placement="right"><i id="grid-icon" class="fa-solid fa-eye"></i></a>
+        </div>
+        <!-- <article class="grid-container">
+        
+        </article>
+        <a class="secondary" id="toggle-grid" data-tooltip="Show grid" data-placement="right"><i id="grid-icon" class="fa-solid fa-eye"></i></a> -->
+    </main>
+</body>
+</html>
